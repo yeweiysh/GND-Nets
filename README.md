@@ -1,5 +1,7 @@
 # GNDC
 
+For submission to IEEE TKDE.
+
 ## Overview
 Here we provide the implementation of GNDC (Graph Neural Diffusion Convolution) in TensorFlow. The repository is organised as follows:
 - `data/` contains datasets Cora, Cora-ML, Citeseer, Pubmed, Amazon Computers, and Amazon Photo;
