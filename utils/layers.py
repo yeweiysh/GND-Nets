@@ -102,7 +102,7 @@ def NeuralDiffDS(inputs, output_dim, norm_mat, activation, in_drop=0.0):
         subspace = list()
         subspace.append(H0)
 
-        for i in range(T):
+        for i in range(T-1):
             H = subspace[-1]
             H1 = tf.expand_dims(H, axis=0)
             H1 = tf.layers.conv1d(H1, output_dim, 1, use_bias=False, activation="relu")
