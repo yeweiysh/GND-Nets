@@ -3,12 +3,12 @@
 For submission to IEEE TKDE.
 
 ## Overview
-Here we provide the implementation of GNDC (Graph Neural Diffusion Convolution) in TensorFlow. The repository is organised as follows:
+Here we provide the implementation of GND-Nets (Graph Neural Diffusion Networks) in TensorFlow. The repository is organised as follows:
 - `data/` contains datasets Cora, Cora-ML, Citeseer, Pubmed, Amazon Computers, and Amazon Photo;
 - `new_data/` contains datasets Chameleon and Squirrel;
-- `models/` contains the implementation of the GNDC (`gndc_slp.py` and `gndc_mlp.py`);
+- `models/` contains the implementation of the GND-Nets (`gndnets_slp.py`, `gndnets_mlp.py`, and `gndnets_ds.py`);
 - `utils/` contains:
-    * an implementation of the aggregation of the multi-scale neighborhood information by SLP and MLP (`layers.py`);
+    * an implementation of three variants of graph neural diffusions (`layers.py`);
     * preprocessing subroutines (`process.py`);
 
 Finally, `bash run_train` execute the experiments.
