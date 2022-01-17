@@ -3,7 +3,7 @@ import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
 
-class BaseGNDC:
+class BaseGNDNets:
     def loss(logits, labels, nb_classes, class_weights):
         sample_wts = tf.reduce_sum(tf.multiply(tf.one_hot(labels, nb_classes), class_weights), axis=-1)
         xentropy = tf.multiply(tf.nn.sparse_softmax_cross_entropy_with_logits(
