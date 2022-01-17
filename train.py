@@ -25,7 +25,7 @@ lr = 0.005  # learning rate
 l2_coef = 0.0005  # weight decay
 hid_units = 64 # numbers of hidden units of \theta for GNDC-MLP, set to 16 for GNDC-SLP.
 nonlinearity = tf.nn.elu
-model = GNDC_MLP #GNDC_SLP
+model = GNDNets_MLP #GNDNets_SLP, GNDNets_DS
 
 flags = tf.app.flags
 FLAGS = flags.FLAGS
@@ -43,11 +43,11 @@ dataset = FLAGS.dataset
 
 # adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask = process.load_data(dataset)
 
-#adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask = \
-#process.load_data_split(FLAGS.dataset,FLAGS.train_size,FLAGS.validation_size,shuffle=True) # 'cora', 'citeseer', 'pubmed'
-
 adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask = \
-process.load_new_data(FLAGS.dataset,FLAGS.train_size,FLAGS.validation_size,shuffle=True) # 'chameleon', 'film', 'squirrel'
+process.load_data_split(FLAGS.dataset,FLAGS.train_size,FLAGS.validation_size,shuffle=True) # 'cora', 'citeseer', 'pubmed'
+
+#adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask = \
+#process.load_new_data(FLAGS.dataset,FLAGS.train_size,FLAGS.validation_size,shuffle=True) # 'chameleon', 'film', 'squirrel'
 
 #adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask = \
 #process.load_data_sparse_graph(FLAGS.dataset,FLAGS.train_size,FLAGS.validation_size,shuffle=True) # 'cora_ml', 'ms academic','amazon computers','amazon photo'
