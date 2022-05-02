@@ -1,4 +1,4 @@
-# GNDC
+# GND-Nets
 
 ## Overview
 Here we provide the implementation of GND-Nets (Graph Neural Diffusion Networks) in TensorFlow. The repository is organised as follows:
